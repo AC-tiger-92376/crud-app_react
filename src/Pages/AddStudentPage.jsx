@@ -2,7 +2,7 @@ import React from 'react'
 import NavMenu from '../Components/NavMenu'
 import FormComponent from '../Components/FormComponent'
 
-const HomePage = () => {
+const AddStudentPage = () => {
   return (
     <div>
         <NavMenu />
@@ -11,4 +11,4 @@ const HomePage = () => {
   )
 }
 
-export default HomePage
+export default AddStudentPage

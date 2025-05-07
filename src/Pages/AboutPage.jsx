@@ -5,6 +5,7 @@ const AboutPage = () => {
   return (
     <div>
         <NavMenu />
+        < h5 className='text-center'>About</h5>
     </div>
   )
 }
