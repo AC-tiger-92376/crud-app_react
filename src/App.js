@@ -4,6 +4,7 @@ import AddStudentPage from './Pages/AddStudentPage';
 import ResultPage from './Pages/ResultPage';
 import AboutPage from './Pages/AboutPage';
 import WelcomePage from './Pages/WelcomePage';
+import './App.css'
 
 function App() {
   return (

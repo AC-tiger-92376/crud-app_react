@@ -9,7 +9,7 @@ const Results = () => {
   const [data, setData] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
-  const [rowsPerPage, setRowsPerPage] = useState(3);
+  const [rowsPerPage, setRowsPerPage] = useState(8);
   const [sortConfig, setSortConfig] = useState({ key: 'firstname', direction: 'asc' });
   const [totalPages, setTotalPages] = useState(1);
 
