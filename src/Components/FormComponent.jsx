@@ -8,7 +8,7 @@ import { Container } from 'react-bootstrap';
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import axios from "axios";
-import { API_BASE_URL } from '../config';
+import { API_STUDENTS_URL } from '../config';
 
 const FormComponent = () => {
   const [fname, setFname] = useState('')
@@ -26,7 +26,7 @@ const FormComponent = () => {
   },[])
 */
   const getData = () => {
-    axios.get(API_BASE_URL)
+    axios.get(API_STUDENTS_URL)
     .then((result)=>{
         setData(result.data)
     })
@@ -36,7 +36,7 @@ const FormComponent = () => {
   }
 
   const handleSave = () => {
-    const url = API_BASE_URL;
+    const url = API_STUDENTS_URL;
     const data = {
         "FirstName" : fname,
         "LastName" : lname,

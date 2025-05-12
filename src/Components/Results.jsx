@@ -3,7 +3,7 @@ import { Container, Button, Table, Modal, Col, Form, Row } from 'react-bootstrap
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import axios from "axios";
-import { API_BASE_URL } from '../config';
+import { API_STUDENTS_URL } from '../config';
 
 const Results = () => {
   const [data, setData] = useState([]);
@@ -24,7 +24,7 @@ const Results = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get(`${API_BASE_URL}`, {
+      const response = await axios.get(`${API_STUDENTS_URL}`, {
         params: {
           search: searchTerm,
           sort: sortConfig.key,
@@ -53,7 +53,7 @@ const Results = () => {
 
   const handleUpdate = async () => {
     try {
-      const url = `${API_BASE_URL}/${editData.id}`;
+      const url = `${API_STUDENTS_URL}/${editData.id}`;
       await axios.put(url, editData);
       handleClose();
       fetchData();
@@ -66,7 +66,7 @@ const Results = () => {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure to delete this employee?")) {
       try {
-        await axios.delete(`${API_BASE_URL}/${id}`);
+        await axios.delete(`${API_STUDENTS_URL}/${id}`);
         fetchData();
         toast.success('Employee has been deleted');
       } catch (error) {
